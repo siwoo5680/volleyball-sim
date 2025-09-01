@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
+<title>간단 배구 시뮬 (6인제)</title>
+<style>
+  html,body{height:100%;margin:0;background:#0b1220;color:#fff;font-family:Arial,Helvetica,sans-serif}
+  #game{display:block;margin:0 auto;touch-action:none}
+  .ui {
+    position:fixed;left:8px;top:8px;background:rgba(0,0,0,0.45);padding:8px;border-radius:8px;font-size:14px;
+  }
+  .ui button{margin-left:6px}
+  .score{font-weight:700}
+  #hint{position:fixed;left:8px;bottom:8px;background:rgba(0,0,0,0.45);padding:8px;border-radius:8px;font-size:13px}
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div class="ui">
+  <span>Score: <span id="score">0 - 0</span></span>
+  <button id="resetBtn">리셋</button>
+  <button id="toggleAI">AI 난이도: 보통</button>
+</div>
+<div id="hint">터치 or 마우스로 서브 방향 선택. AI는 로컬스토리지에 경험치 저장함.</div>
+
+<!-- Matter.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
